@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Button, ContactCard, Navbar } from "./Components";
+import bonche from "./fonts/boncheConf";
+
 const page = () => {
   const [formData,setformData]= useState({
     name: "",
@@ -10,7 +12,8 @@ const page = () => {
     service: "",
     moreInfo: "",
     timeline: "",
-    referral: ""
+    referral: "",
+    newsLetterMail:""
   })
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,7 +27,7 @@ const page = () => {
   };
 
   return (
-    <section className="md:w-full items-center flex flex-col">
+    <section className={`md:w-full items-center flex flex-col ${bonche.className}`}>
       <section className="p-4 text-xs flex flex-col w-full justify-between items-center text-center h-screen bg-[url(/greenGradient.png)] md:bg-[url(/Rectangle 1.png)] bg-cover bg-no-repeat">
          <Navbar/>
           <div className="p-3 flex md:w-3/5 md:mt-20 md:mb-10 flex-col md:space-y-7 space-y-4 items-center">
@@ -33,9 +36,9 @@ const page = () => {
          </p>
          <p className="md:text-sm">For students. For professionals. For go-getters.</p>
          <p className="md:text-sm">Get writing that works.</p>
-           <div className="md:flex-row border md:space-x-8 md:w-3/4 flex flex-col space-y-5">
-           <Button text="Chat With Us on WhatsApp" className="md:w-3/5 w-full" textColor="white" backgroundColor="ceedr-500" btnImage={true}/>
-           <Button text="Request a Service" textColor="" className="md:w-2/5 border w-full" backgroundColor="ceedr-200" btnImage={false}/>
+           <div className="md:flex-row md:space-x-8 md:w-3/4 flex flex-col space-y-5">
+           <Button text="Chat With Us on WhatsApp" className="md:w-3/5 w-full h-full" textColor="white" backgroundColor="ceedr-500" btnImage={true}/>
+           <Button text="Request a Service" textColor="" className="md:w-2/5 w-full" backgroundColor="ceedr-200" btnImage={false}/>
          </div>
           </div>
 
@@ -451,8 +454,8 @@ onChange={(e) => setformData({ ...formData, moreInfo: e.target.value })}
     <footer className="bg-ceedr-500 p-4 flex space-y-7 w-full flex-col items-center text-center text-xs text-white">
       <Image src="/Frame 49.png" height={60} width={80} alt="ceedrLogo" className="border-white"/>
       <h1 className=" font-medium md:text-3xl">We're not just service providers. <br/> We're your writing partners.</h1>
-      <form className="w-full flex flex-col space-y-2 md:flex-row md:w-1/2 md:space-x-6">   
-        <input type="text" className="bg-white text-ceedrGray-100 p-2 w-full md:w-3/4 h-8" placeholder="Enter full name" />
+      <form onSubmit={handleSubmit} className="w-full flex flex-col space-y-2 md:flex-row md:w-1/2 md:space-x-6">   
+        <input  type="text" value={formData.newsLetterMail} onChange={(e)=>setformData({ ...formData, newsLetterMail: e.target.value })} className="bg-white text-ceedrGray-100 p-2 w-full md:w-3/4 h-8" placeholder="Enter full name" />
         <button className="bg-ceedr-200 w-full  text-ceedr-500 p-2 md:w-1/3 h-8" type="submit">Subscribe to our newsletter</button>
       </form>
       <nav className="md:flex md:w-1/3 md:justify-between md:text-sm md:font-medium">
