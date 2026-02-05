@@ -8,12 +8,11 @@ html {
   --color-ceedr-500: #0A2719;
   --color-ceedr-200: #41E496;
   --color-ceedrGray-100: #9E9E9E;
-  --color-ceedrGray-100: #9E9E9E;
   --color-ceedrGray-200: #E5E5E5;
   --color-ceedrBrown-100: #813200;
-  --color-ceedrYellow-100: #FFC300
+  --color-ceedrYellow-100: #FFC300;
+  --font-poppins: var(--font-poppins);
 }
-
 
 body {
   background: var(--background);

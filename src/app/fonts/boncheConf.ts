@@ -1,15 +1,15 @@
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 
 const bonche = localFont({
-   src:[
+  src: [
     {
-    path: './Bonche/Demo_Fonts/Fontspring-DEMO-bonche-regular.otf',
-    weight: '400',
-    style: 'normal',
-    }
-   ] ,
-   variable: '--font-bonche',
-   display: 'swap'
-})
+      path: "./Bonche/free/Fonts/bonche-light.otf",
+      // weight: "300",
+      style: "normal",
+    },
+  ],
+  variable: "--font-bonche",
+  display: "swap",
+});
 
 export default bonche;
