@@ -30,7 +30,7 @@ const Page = () => {
     <section
       className={`md:w-full items-center flex flex-col ${bonche.className}`}
     >
-      <section className="p-4 text-xs flex flex-col w-full justify-between items-center text-center h-screen bg-[url(/greenGradient.png)] md:bg-[url(/Rectangle 1.png)] bg-cover bg-no-repeat">
+      <section className="p-4 text-xs flex flex-col w-full justify-between items-center text-center  bg-[url(/greenGradient.png)] md:bg-[url(/rectangle-1.png)] bg-cover bg-no-repeat">
         <Navbar />
         <div className="p-3 flex md:w-3/5 md:mt-20 md:mb-10 flex-col md:space-y-7 space-y-4 items-center">
           <h3 className="text-xl font-extrabold leading-10 md:text-2xl md:w-1/2 text-ceedr-500">
@@ -72,19 +72,19 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="relative md:w-3/4 md:h-100 md:-mb-70  ml-auto mr-auto">
+        <div className="relative w-full h-[400px] md:w-4/5 md:h-[500px] md:-mb-[300px]  ml-auto mr-auto">
           <Image
             src="/BlueShirt.png"
             alt="Guy in blue shirt"
             priority
             fill
-            className="block md:hidden object-cover"
+            className="block md:hidden object-contain"
           />
           <Image
             src="/Group5Desktop.png"
             alt="Guy in blue shirt"
             fill
-            className="hidden md:block object-cover"
+            className="hidden md:block object-contain"
             priority
           />
         </div>

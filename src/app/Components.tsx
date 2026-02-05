@@ -24,7 +24,7 @@ export function Navbar() {
         className="md:hidden object-contain"
       />
 
-      <div className="md:flex md:w-3/5 text-ceedr-500 hidden md:justify-around md:text-sm md:font-medium">
+      <div className="md:flex md:w-3/5 text-black hidden md:justify-around md:text-sm md:font-medium">
         <ul className="flex space-x-2 items-center font-black justify-center md:space-x-10">
           <li>
             <a href="#services" className="hover:underline">
@@ -115,4 +115,4 @@ export function ContactCard({ imgPath, smText, address }: contactCardProps) {
   );
 }
 
-export function Footer() {}
+export function Footer() { }
