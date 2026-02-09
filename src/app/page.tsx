@@ -1,7 +1,8 @@
-"use client";
-import { useState } from "react";
+"use client"
+import { useState, useCallback } from "react";
 import Image from "next/image";
-import { Button, ContactCard, Navbar } from "./Components";
+import { ContactCard, Navbar } from "./Components";
+import Link from "next/link";
 
 interface testimonial {
   desc: string;
@@ -27,6 +28,20 @@ const Page = () => {
     console.log(formData);
     // send to backend or show a message
   };
+
+  const handleLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.getAttribute("href");
+    if (!href || !href.startsWith("#")) return;
+
+    const targetId = href.split("#")[1];
+    const element = document.getElementById(targetId);
+
+    if (element) {
+      e.preventDefault();
+      element.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", `#${targetId}`);
+    }
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -55,7 +70,7 @@ const Page = () => {
       className={`md:w-full items-center flex flex-col`}
     >
       <section className="font-playfair text-xs h-full flex flex-col w-full justify-between items-center text-center  bg-[url(/greenGradient.png)] md:bg-[url(/rectangle-1.png)] bg-cover bg-no-repeat">
-        <Navbar />
+        <Navbar onNavItemClick={handleLinkClick} />
         <div className="p-0 mt-12 md:p-3 w-9/10 md:w-3/5 flex md:mt-20 md:mb-10 mb-10 flex-col md:space-y-7 space-y-5 items-center">
           <h3 className="text-[28px] text-center mb-10 leading-9 font-semibold md:leading-16 md:text-5xl text-ceedr-500">
             It&apos;s not just what you&apos;ve done, <br className="hidden md:block" /> it&apos;s how you
@@ -82,7 +97,12 @@ const Page = () => {
         </div>
 
         <div className="md:flex-row md:justify-center w-7/10 md:mb-10 md:space-x-5 flex flex-col md:space-y-0 space-y-4">
-          <button className="text-[11px] md:text-[16px] md:py-2.5 py-3 md:px-10 px-5 bg-ceedr-500 font-semibold flex items-center justify-center space-x-2 text-white ">
+          <a
+            href="https://wa.link/otpw1g"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] md:text-[16px] md:py-2.5 py-3 md:px-10 px-5 bg-ceedr-500 font-semibold flex items-center justify-center space-x-2 text-white "
+          >
             <div className="relative md:w-[24px] md:h-[24px] w-[16px] h-[16px]">
               <Image
                 src="/whatsapp.png"
@@ -92,10 +112,16 @@ const Page = () => {
               />
             </div>
             <span className="font-semibold">Chat With Us on WhatsApp</span>
-          </button>
-          <button className="md:text-[16px] text-[11px] md:py-2.5 py-3 md:px-10 px-5 bg-ceedr-200 font-semibold flex items-center justify-center space-x-2 text-ceedr-500 ">
+          </a>
+
+          <Link
+            href="#request-form"
+            onClick={handleLinkClick}
+            className="md:text-[16px] text-[11px] md:py-2.5 py-3 md:px-10 px-5 bg-ceedr-200 font-semibold flex items-center justify-center space-x-2 text-ceedr-500"
+          >
             Request a Service
-          </button>
+          </Link>
+
         </div>
 
 
@@ -127,8 +153,8 @@ const Page = () => {
             From Projects to Pitches,<br /> We&apos;ve Got Your Back
           </h1>
 
-          <section className="flex  flex-col md:flex-row md:space-x-5 space-y-5">
-            <div className="bg-ceedr-500 relative text-white space-y-11 text-xs md:w-1/3 h-[416px] md:h-[500px] px-6 pt-6 flex flex-col">
+          <section className="flex  flex-col lg:flex-row lg:space-x-5 space-y-5">
+            <div className="bg-ceedr-500 relative text-white space-y-11 text-xs lg:w-1/3 h-[416px] md:h-[500px] px-6 pt-6 flex flex-col">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="bg-ceedr-200 text-ceedr-500 flex items-center justify-center font-semibold text-2xl md:text-[30px]">
                   <span className="py-2 px-3">  01</span>
@@ -160,7 +186,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="bg-ceedr-200 md:h-[500px] relative text-ceedr-500 md:w-1/3 text-xs h-[400px] px-6 pt-6 flex flex-col space-y-5 md:space-y-11">
+            <div className="bg-ceedr-200 md:h-[500px] relative text-ceedr-500 lg:w-1/3 text-xs h-[400px] px-6 pt-6 flex flex-col space-y-5 md:space-y-11">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="text-ceedr-200 md:text-[30px] bg-ceedr-500 flex items-center justify-center font-semibold text-2xl">
                   <span className="py-2 px-3">  02</span>
@@ -188,7 +214,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="bg-ceedrBrown-100 relative text-white text-xs md:w-1/3 h-[400px] md:h-[500px] px-6 pt-6 flex flex-col">
+            <div className="bg-ceedrBrown-100 relative text-white text-xs lg:w-1/3 h-[400px] md:h-[500px] px-6 pt-6 flex flex-col">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="bg-white text-ceedrBrown-100 flex items-center justify-center font-semibold text-2xl md:text-[30px]">
                   <span className="py-2 px-3">03</span>
@@ -217,7 +243,7 @@ const Page = () => {
             </div>
           </section>
 
-          <section className="bg-ceedrGray-200 mt-14 md:mt-10 md:w-full pb-4 px-5 pt-6 flex flex-col space-y-8 md:flex-row md:p-0 md:py-8 md:px-10 md:justify-between md:space-x-9 md:space-y-0 md:items-center overflow-hidden">
+          <section className="bg-ceedrGray-200 mt-14 md:mt-10 md:w-full pb-4 px-5 pt-6 flex flex-col space-y-8 md:flex-row md:p-0 md:py-8 md:px-10 lg:justify-between lg:space-x-9 lg:space-y-0 md:items-center overflow-hidden">
             <div className=" md:w-[45%] flex flex-col">
               <h1 className="text-ceedr-500 text-2xl md:text-4xl font-semibold font-playfair text-left">
                 Not Just Words, Results That Speak
@@ -279,12 +305,11 @@ const Page = () => {
             <br /> Don&apos;t Just Take Our Word for It.
           </h1>
 
-          <div className="flex flex-col space-y-5 md:flex-row md:space-x-10 ">
-
+          <div className="flex flex-col space-y-5 lg:flex-row lg:space-x-10 ">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="p-3 py-8 mt-8 md:w-1/3 text-xs flex flex-col justify-between md:h-80 shadow-xl bg-white"
+                className="p-3 py-8 mt-8 lg:w-1/3 text-xs flex flex-col justify-between md:h-80 shadow-xl bg-white"
               >
                 <div className="">
                   <div className="text-ceedrYellow-100 mb-5">
@@ -325,12 +350,12 @@ const Page = () => {
             <hr className="w-[55%] md:w-[25%] border-t border-ceedrGray-100" />
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:md:grid-cols-2  md:grid-rows-[auto_auto] md:gap-6 md:items-end md:justify-between">
-            <h1 className="md:pl-43 order-1 md:order-1 md:col-span-1 md:text-4xl font-playfair md:text-left text-2xl font-semibold text-ceedr-500">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-6 lg:items-end lg:justify-between">
+            <h1 className="md:pl-43 order-1 md:order-1 lg:col-span-1 md:text-4xl font-playfair md:text-left text-2xl font-semibold text-ceedr-500">
               The Ceedr Process: Simple. Smart. Seamless
             </h1>
 
-            <div className="order-2 md:order-3 md:col-span-2 bg-ceedrGray-200 p-9 md:p-20 relative pt-10 flex flex-col md:space-x-15 md:flex-row space-y-4 mb-4">
+            <div className="order-2 md:order-3 lg:col-span-2 bg-ceedrGray-200 p-9 md:p-20 relative pt-10 flex flex-col md:space-x-15 md:flex-row space-y-4 mb-4">
               <div className="text-xs md:text-sm flex flex-col md:w-1/5 space-y-6">
                 <div className="md:flex items-center md:space-x-4">
                   <div className="w-fit p-2 md:p-4 text-ceedr-200 text-2xl md:text-[30px] font-semibold font-playfair bg-ceedr-500">
@@ -400,10 +425,14 @@ const Page = () => {
               />
             </div>
 
-            <div className="order-3 md:w-full md:flex md:flex-col md:pr-35 md:items-end md:order-2 md:col-span-1">
-              <button className="bg-ceedr-500 py-3 md:py-5 px-20 md:text-xl text-center text-white flex space-x-3 items-center justify-center">
+            <div className="order-3 md:w-full md:flex md:flex-col md:pr-35 md:items-end md:order-2 lg:col-span-1">
+              <Link
+                href="#request-form"
+                onClick={handleLinkClick}
+                className="bg-ceedr-500 py-3 md:py-5 px-20 md:text-xl text-center text-white flex space-x-3 items-center justify-center"
+              >
                 <p className="font-playfair font-semibold md:text-[16px] text-[10px]">Work With Us</p>
-              </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -417,8 +446,13 @@ const Page = () => {
               Whether it&apos;s your first job or your next big deal, Ceedr has
               the words that open doors.
             </p>
-            <div className="md:flex-row md:space-x-10 flex flex-col items-center w-3/5 md:w-full md:space-y-0 space-y-4">
-              <button className="bg-ceedr-500 w-full py-3 md:space-y-0 md:py-5 px-4 md:text-xl text-center text-white flex space-x-3 items-center justify-center">
+            <div className="lg:flex-row lg:space-x-10 flex flex-col items-center w-3/5 md:w-full lg:space-y-0 space-y-4">
+              <a
+                href="https://wa.link/otpw1g"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-ceedr-500 w-full py-3 md:space-y-0 md:py-5 px-4 md:text-xl text-center text-white flex space-x-3 items-center justify-center"
+              >
                 <Image
                   className="object-contain border"
                   src="/white-whatsApp-icon.png"
@@ -427,7 +461,7 @@ const Page = () => {
                   height={10}
                 />
                 <span className="text-[11px] font-semibold md:text-[16px] font-playfair">Start on whatsApp</span>
-              </button>
+              </a>
 
               <button className="bg-ceedr-200 w-full py-3 px-4 md:py-5 md:text-xl text-center text-ceedr-500 flex space-x-3 items-center justify-center">
                 <span className="text-[11px] font-semibold md:text-[16px] font-playfair">Fill Request Form</span>
@@ -452,12 +486,10 @@ const Page = () => {
             />
           </div>
         </section>
-
-
       </div>
 
-      <div className="grid md:mb-28 my-3 md:mt-25 grid-cols-1 items-center gap-4 md:grid-cols-2 md:grid-rows-[auto,auto,auto] w-full md:w-[81%] mx-auto">
-        <div className="flex w-9/10 md:w-full mx-auto flex-col mb-7 order-1 md:row-start-1 md:col-start-1">
+      <div id="request-form" className="grid md:mb-28 my-3 md:mt-25 grid-cols-1 items-center gap-4 lg:grid-cols-2 lg:grid-rows-[auto,auto,auto] w-full md:w-[90%] lg:w-[81%] mx-auto">
+        <div className="flex w-9/10 md:w-full mx-auto flex-col mb-7 order-1 lg:row-start-1 lg:col-start-1">
           <div className="w-5/7 flex justify-center md:justify-start mt-6 md:mt-0 text-ceedrGray-100 items-center space-x-4">
             <h1 className="font-poppins font-normal md:text-[18px] text-[10px]">REQUEST FORM</h1>
             <hr className="w-3/5 border-t border-ceedrGray-100 " />
@@ -472,7 +504,7 @@ const Page = () => {
           </p>
         </div>
 
-        <section className="requestForm order-2 md:row-start-1 md:row-span-3 md:col-start-2 h-full">
+        <section className="requestForm order-2 lg:row-start-1 lg:row-span-3 lg:col-start-2 h-full">
           <form
             onSubmit={handleSubmit}
             className="bg-ceedr-500 py-9 px-7  text-xs flex flex-col space-y-3 md:space-y-5"
@@ -623,7 +655,7 @@ const Page = () => {
 
         <div
           id="contact"
-          className="order-3 md:w-full w-9/10 mx-auto md:row-start-2 md:col-start-1 h-full  flex flex-col mt-10 md:mt-20"
+          className="order-3 md:w-full w-9/10 mx-auto lg:row-start-2 lg:col-start-1 h-full  flex flex-col mt-10 md:mt-20"
         >
           <div className="w-5/7 flex mb-2 text-ceedrGray-100 items-center space-x-4">
             <h1 className="text-[11px] font-poppins md:text-[18px] font-normal">CONTACT</h1>
@@ -638,7 +670,7 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="flex w-9/10 mx-auto md:mx-0 flex-col space-y-4 mb-10 md:mb-0 md:w-1/2 order-4 md:row-start-3 md:col-start-1">
+        <div className="flex w-9/10 mx-auto md:mx-0 flex-col space-y-4 mb-10 md:mb-0 md:w-1/2 order-4 lg:row-start-3 lg:col-start-1">
           <ContactCard
             imgPath="/mail.png"
             smText="Email"
@@ -646,18 +678,21 @@ const Page = () => {
           />
           <ContactCard
             imgPath="/whatsapp.png"
-            smText="Email"
-            address="contact@ceedr.com.ng"
+            smText="WhatsApp"
+            address="wa.link/ceedr"
+            href="https://wa.link/otpw1g"
           />
           <ContactCard
             imgPath="/instagram.png"
-            smText="Email"
-            address="contact@ceedr.com.ng"
+            smText="Instagram"
+            address="@ceedr.ng"
+            href="https://www.instagram.com/ceedr.ng/"
           />
           <ContactCard
             imgPath="/new-twitter.png"
-            smText="Email"
-            address="contact@ceedr.com.ng"
+            smText="Twitter"
+            address="@ceedr.ng"
+          // href="https://twitter.com/ceedr.ng"
           />
         </div>
       </div>
@@ -676,7 +711,7 @@ const Page = () => {
         </h1>
         <form
           onSubmit={handleSubmit}
-          className="w-full mb-12 flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row md:w-1/2"
+          className="w-full mb-12 flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row md:w-3/4 lg:w-1/2"
         >
           <input
             type="text"
