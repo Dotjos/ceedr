@@ -3,15 +3,15 @@ import Link from "next/link";
 
 export function Navbar() {
   return (
-    <nav className="bg-white flex justify-between items-center p-3 w-full">
+    <nav className="bg-white w-9/10 py-4 px-4 md:px-20 md:py-4 flex justify-between items-center md:mt-8 mt-4">
       <Link href="">
-        <div className=" h-6 w-15 relative md:h-10 md:w-25 md:ml-10">
+        <div className="h-[32.2px] w-20 md:h-[50px] relative md:ml-10">
           <Image
-            src="/ceedrLogo.png"
+            src="/Group 4ceedr.png"
             alt="Ceedr Logo"
             fill
             priority
-            className="md:h-12 border object-contain"
+            className="object-contain"
           />
         </div>
       </Link>
@@ -19,13 +19,13 @@ export function Navbar() {
       <Image
         src="/Menu.png"
         alt="Menu Logo"
-        width={20}
-        height={50}
+        width={32}
+        height={32}
         className="md:hidden object-contain"
       />
 
-      <div className="md:flex md:w-3/5 text-black hidden md:justify-around md:text-sm md:font-medium">
-        <ul className="flex space-x-2 items-center font-black justify-center md:space-x-10">
+      <div className="md:flex md:w-3/5 font-semibold hidden md:justify-around md:text-sm">
+        <ul className="flex space-x-2 items-center justify-center md:space-x-10">
           <li>
             <a href="#services" className="hover:underline">
               Services
@@ -43,17 +43,19 @@ export function Navbar() {
           </li>
         </ul>
 
-        <button className="border font-black flex text-xs items-center space-x-4 border-ceedr-500 text-ceedr-500 p-3">
-          <Image
-            src="/whatsapp500.png"
-            alt="WhatsApp Icon"
-            width={20}
-            height={10}
-            className="inline-block ml-2 object-contain"
-          />
-          <p>Chat With Us on WhatsApp</p>
-        </button>
+
       </div>
+
+      <button className="hidden border font-semibold md:flex text-xs items-center space-x-4 border-ceedr-500 text-ceedr-500 py-2 px-8">
+        <Image
+          src="/whatsapp-2.png"
+          alt="WhatsApp Icon"
+          width={24}
+          height={24}
+          className="inline-block ml-2 object-contain"
+        />
+        <p>Chat With Us on WhatsApp</p>
+      </button>
     </nav>
   );
 }
