@@ -425,7 +425,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="order-3 md:w-full md:flex md:flex-col md:pr-35 md:items-end md:order-2 lg:col-span-1">
+            <div className="order-3 w-3/5 md:w-full md:flex md:flex-col md:pr-35 md:items-end md:order-2 lg:col-span-1">
               <Link
                 href="#request-form"
                 onClick={handleLinkClick}
