@@ -82,7 +82,7 @@ const Page = () => {
         </div>
 
         <div className="md:flex-row md:justify-center w-7/10 md:mb-10 md:space-x-5 flex flex-col md:space-y-0 space-y-4">
-          <button className="text-[11px] md:text-[16px] md:py-2.5 py-2 md:px-10 px-5 bg-ceedr-500 font-semibold flex items-center justify-center space-x-2 text-white ">
+          <button className="text-[11px] md:text-[16px] md:py-2.5 py-3 md:px-10 px-5 bg-ceedr-500 font-semibold flex items-center justify-center space-x-2 text-white ">
             <div className="relative md:w-[24px] md:h-[24px] w-[16px] h-[16px]">
               <Image
                 src="/whatsapp.png"
@@ -93,7 +93,7 @@ const Page = () => {
             </div>
             <span className="font-semibold">Chat With Us on WhatsApp</span>
           </button>
-          <button className="md:text-[16px] text-[11px] md:py-2.5 py-2 md:px-10 px-5 bg-ceedr-200 font-semibold flex items-center justify-center space-x-2 text-ceedr-500 ">
+          <button className="md:text-[16px] text-[11px] md:py-2.5 py-3 md:px-10 px-5 bg-ceedr-200 font-semibold flex items-center justify-center space-x-2 text-ceedr-500 ">
             Request a Service
           </button>
         </div>
@@ -118,12 +118,12 @@ const Page = () => {
       </section>
 
       <div className="w-9/10 flex flex-col space-y-4 items-center justify-center">
-        <section id="services" className="services flex flex-col items-center mt md:mt-96">
-          <div className="w-5/7 md:w-7/8 font-poppins my-2.5 flex text-[10px] text-ceedrGray-100 items-center space-x-3">
-            <h1 className="text-ceedrGray-100 font-normal text-[10px]">SERVICES</h1>
+        <section id="services" className="services flex flex-col md:items-center items-start mt md:mt-96">
+          <div className="w-5/7 md:w-[78%] font-poppins my-2.5 flex text-[10px] text-ceedrGray-100 items-center space-x-3">
+            <h1 className="text-ceedrGray-100 font-normal text-[10px] md:text-[18px]">SERVICES</h1>
             <hr className="w-4/5 md:w-1/5 border-t border-ceedrGray-100" />
           </div>
-          <h1 className="mb-7 md:mb-12 md:w-7/8 font-playfair font-semibold text-2xl">
+          <h1 className="mb-7 md:mb-12 md:w-[78%] md:text-4xl font-playfair font-semibold text-2xl">
             From Projects to Pitches,<br /> We&apos;ve Got Your Back
           </h1>
 
@@ -268,13 +268,13 @@ const Page = () => {
           </section>
         </section>
 
-        <section id="testimonials" className="testimonies md:p-10">
+        <section id="testimonials" className="testimonies md:w-[78%] md:py-10">
           <div className="w-5/7 flex text-ceedrGray-100 items-center mt-3 mb-2 space-x-3">
             <h1 className="text-xs md:text-[18px] font-poppins">TESTIMONIES</h1>
             <hr className="w-[55%] md:w-[37%] border-t border-ceedrGray-100 "></hr>
           </div>
 
-          <h1 className="font-playfair font-semibold text-[22px] md:text-[36px] text-left">
+          <h1 className="font-playfair font-semibold text-[22px md:text-[36px] text-left">
             Receipts? We&apos;ve Got Plenty.
             <br /> Don&apos;t Just Take Our Word for It.
           </h1>
@@ -320,13 +320,13 @@ const Page = () => {
         </section>
 
         <section className="process mt-5">
-          <div className="flex text-ceedrGray-100 items-center my-3 space-x-4 md:pl-6">
+          <div className="flex md:w-[78%] md:mx-auto text-ceedrGray-100 items-center my-3 space-x-4 md:pl-6">
             <h1 className="text-[10px] md:font-normal font-poppins md:text-[18px]">OUR PROCESS</h1>
             <hr className="w-[55%] md:w-[25%] border-t border-ceedrGray-100" />
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:md:grid-cols-2  md:grid-rows-[auto_auto] md:gap-6 md:items-end md:justify-between">
-            <h1 className="md:pl-10 order-1 md:order-1 md:col-span-1 md:text-4xl font-playfair md:text-left text-2xl font-semibold md:w-4/5  text-ceedr-500">
+            <h1 className="md:pl-43 order-1 md:order-1 md:col-span-1 md:text-4xl font-playfair md:text-left text-2xl font-semibold text-ceedr-500">
               The Ceedr Process: Simple. Smart. Seamless
             </h1>
 
@@ -400,7 +400,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="order-3 md:w-full md:flex md:flex-col md:pr-10 md:items-end md:order-2 md:col-span-1">
+            <div className="order-3 md:w-full md:flex md:flex-col md:pr-35 md:items-end md:order-2 md:col-span-1">
               <button className="bg-ceedr-500 py-3 md:py-5 px-20 md:text-xl text-center text-white flex space-x-3 items-center justify-center">
                 <p className="font-playfair font-semibold md:text-[16px] text-[10px]">Work With Us</p>
               </button>
@@ -418,9 +418,9 @@ const Page = () => {
               the words that open doors.
             </p>
             <div className="md:flex-row md:space-x-10 flex flex-col items-center w-3/5 md:w-full md:space-y-0 space-y-4">
-              <button className="bg-ceedr-500 w-full py-3 md:space-y-0 space-y-4 md:py-5 px-4 md:text-xl text-center text-white flex space-x-3 items-center justify-center">
+              <button className="bg-ceedr-500 w-full py-3 md:space-y-0 md:py-5 px-4 md:text-xl text-center text-white flex space-x-3 items-center justify-center">
                 <Image
-                  className="object-contain"
+                  className="object-contain border"
                   src="/white-whatsApp-icon.png"
                   alt="button image"
                   width={20}
@@ -456,7 +456,7 @@ const Page = () => {
 
       </div>
 
-      <div className="grid md:mb-28 border my-3 md:mt-25 grid-cols-1 items-center gap-4 md:grid-cols-2 md:grid-rows-[auto,auto,auto] w-full md:w-[81%] mx-auto">
+      <div className="grid md:mb-28 my-3 md:mt-25 grid-cols-1 items-center gap-4 md:grid-cols-2 md:grid-rows-[auto,auto,auto] w-full md:w-[81%] mx-auto">
         <div className="flex w-9/10 md:w-full mx-auto flex-col mb-7 order-1 md:row-start-1 md:col-start-1">
           <div className="w-5/7 flex justify-center md:justify-start mt-6 md:mt-0 text-ceedrGray-100 items-center space-x-4">
             <h1 className="font-poppins font-normal md:text-[18px] text-[10px]">REQUEST FORM</h1>
@@ -530,7 +530,7 @@ const Page = () => {
 
             <label
               htmlFor="serviceSel"
-              className="block md:my-3  text-white md:font-playfair font-poppins font-semibold mb-1"
+              className="block text-white md:font-playfair font-poppins font-semibold mb-1"
             >
               What service do you need?
             </label>
@@ -564,7 +564,7 @@ const Page = () => {
             </select>
 
             <label
-              className="text-white md:font-playfair mb-1 font-poppins font-semibold"
+              className="text-white md:font-playfair mb-1 md:mb-3 font-poppins font-semibold"
               htmlFor="textArea"
             >
               Tell Us a Bit More (Optional)
@@ -581,7 +581,7 @@ const Page = () => {
 
             <label
               htmlFor="timeline"
-              className="block md:my-3 md:font-playfair text-xs font-poppins font-semibold text-white mb-1"
+              className="block md:font-playfair text-xs font-poppins font-semibold text-white mb-1"
             >
               Preferred Delivery Timeline
             </label>
@@ -614,9 +614,9 @@ const Page = () => {
 
             <button
               type="submit"
-              className="bg-ceedr-200 md:text-[16px] font-playfair font-semibold text-[10px] text-black px-2 py-4 w-1/2 mt-7"
+              className="bg-ceedr-200 md:text-[16px] font-playfair font-semibold text-[10px] text-black px-2 py-3 w-1/2 mt-7"
             >
-              Submit Request
+              Submit Form
             </button>
           </form>
         </section>
@@ -638,7 +638,7 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="flex md:-mt-70 w-9/10 mx-auto flex-col space-y-4 mb-10 md:mb-0 md:w-1/2 order-4 md:row-start-3 md:col-start-1">
+        <div className="flex w-9/10 mx-auto md:mx-0 flex-col space-y-4 mb-10 md:mb-0 md:w-1/2 order-4 md:row-start-3 md:col-start-1">
           <ContactCard
             imgPath="/mail.png"
             smText="Email"
@@ -676,7 +676,7 @@ const Page = () => {
         </h1>
         <form
           onSubmit={handleSubmit}
-          className="w-full mb-12 flex flex-col space-y-4 md:space-y-0 md:flex-row md:w-1/2 md:justify-between"
+          className="w-full mb-12 flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row md:w-1/2"
         >
           <input
             type="text"
@@ -685,7 +685,7 @@ const Page = () => {
               setformData({ ...formData, newsLetterMail: e.target.value })
             }
             className="bg-white text-ceedrGray-100 p-3 w-full md:w-3/5"
-            placeholder="Enter full name"
+            placeholder="Enter your email"
           />
           <button
             className="bg-ceedr-200 md:text-[11px] text-black font-semibold font-playfair p-3 md:px-5 "
