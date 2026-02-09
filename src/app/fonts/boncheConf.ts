@@ -4,7 +4,7 @@ const bonche = localFont({
   src: [
     {
       path: "./Bonche/free/Fonts/bonche-light.otf",
-      // weight: "300",
+      weight: "100",
       style: "normal",
     },
   ],
