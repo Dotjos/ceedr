@@ -3,6 +3,68 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+
+export type ButtonVariant = 'primary' | 'secondary' | 'outline';
+
+interface ButtonProps {
+  text: string;
+  variant?: ButtonVariant;
+  href?: string;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  icon?: React.ReactNode;
+  className?: string;
+  isFullWidth?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+export function Button({
+  text,
+  variant = 'primary',
+  href,
+  onClick,
+  icon,
+  className = "",
+  isFullWidth = false,
+  type = 'button',
+}: ButtonProps) {
+  const baseStyles = "flex items-center justify-center space-x-2 font-semibold transition-all duration-200";
+  const variants = {
+    primary: "bg-ceedr-500 text-white hover:bg-ceedr-500/90",
+    secondary: "bg-ceedr-200 text-ceedr-500 hover:bg-ceedr-200/90",
+    outline: "border border-ceedr-500 text-ceedr-500 hover:bg-ceedr-500/5",
+  };
+
+  // Standardized padding and text size
+  const sizing = "text-[11px] md:text-[16px] py-3 px-5 md:py-2.5 md:px-10";
+  const widthClass = isFullWidth ? "w-full" : "w-fit";
+
+  const combinedClassName = `${baseStyles} ${variants[variant]} ${sizing} ${widthClass} ${className}`;
+
+  if (href) {
+    if (href.startsWith('#')) {
+      return (
+        <a href={href} onClick={onClick as (e: React.MouseEvent<HTMLAnchorElement>) => void} className={combinedClassName}>
+          {icon}
+          <span>{text}</span>
+        </a>
+      );
+    }
+    return (
+      <Link href={href} className={combinedClassName} target={href.startsWith('http') ? "_blank" : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
+        {icon}
+        <span>{text}</span>
+      </Link>
+    );
+  }
+
+  return (
+    <button type={type} onClick={onClick as (e: React.MouseEvent<HTMLButtonElement>) => void} className={combinedClassName}>
+      {icon}
+      <span>{text}</span>
+    </button>
+  );
+}
+
 export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -90,22 +152,22 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
           </li>
         </ul>
 
-        <a
+        <Button
+          text="Chat With Us on WhatsApp"
           href="https://wa.link/otpw1g"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex border font-semibold text-xs items-center space-x-3 border-wa-green text-white py-3 px-8 mt-8 border-white"
-        >
-          <div className="relative w-6 h-6">
-            <Image
-              src="/white-whatsApp-icon.png"
-              alt="WhatsApp Icon"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <p className="font-poppins">Chat With Us on WhatsApp</p>
-        </a>
+          className="font-playfair border-white text-white"
+          variant="outline"
+          icon={
+            <div className="relative w-6 h-6">
+              <Image
+                src="/white-whatsApp-icon.png"
+                alt="WhatsApp Icon"
+                fill
+                className="object-contain"
+              />
+            </div>
+          }
+        />
       </div>
 
       <div className="lg:flex lg:w-3/5 font-semibold hidden lg:justify-around lg:text-sm">
@@ -142,31 +204,24 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
 
       </div>
 
-      <a
-        href="https://wa.link/otpw1g"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hidden border font-semibold lg:w-fit lg:flex text-xs items-center lg:space-x-4 space-x-2 border-ceedr-500 text-ceedr-500 py-2 md:px-4"
-      >
-        <Image
-          src="/whatsapp-2.png"
-          alt="WhatsApp Icon"
-          width={24}
-          height={24}
-          className="inline-block ml-2 border object-contain"
+      <div className="hidden lg:block">
+        <Button
+          text="Chat With Us on WhatsApp"
+          href="https://wa.link/otpw1g"
+          variant="outline"
+          icon={
+            <Image
+              src="/whatsapp-2.png"
+              alt="WhatsApp Icon"
+              width={24}
+              height={24}
+              className="inline-block object-contain"
+            />
+          }
         />
-        <p className="">Chat With Us on WhatsApp</p>
-      </a>
+      </div>
     </nav >
   );
-}
-
-interface ButtonProps {
-  text: string;
-  textColor: string;
-  btnImage: boolean;
-  backgroundColor: string;
-  className?: string;
 }
 
 interface contactCardProps {

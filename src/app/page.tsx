@@ -1,7 +1,7 @@
 "use client"
 import { useState, useCallback } from "react";
 import Image from "next/image";
-import { ContactCard, Navbar } from "./Components";
+import { ContactCard, Navbar, Button } from "./Components";
 import Link from "next/link";
 
 interface testimonial {
@@ -29,7 +29,7 @@ const Page = () => {
     // send to backend or show a message
   };
 
-  const handleLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleLinkClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
     const href = e.currentTarget.getAttribute("href");
     if (!href || !href.startsWith("#")) return;
 
@@ -96,32 +96,30 @@ const Page = () => {
 
         </div>
 
-        <div className="md:flex-row md:justify-center w-7/10 md:mb-10 md:space-x-5 flex flex-col md:space-y-0 space-y-4">
-          <a
+        <div className="md:flex-row md:justify-center w-7/10 md:w-1/2 md:mb-10 md:space-x-5 flex flex-col md:space-y-0 space-y-4">
+          <Button
+            text="Chat With Us on WhatsApp"
             href="https://wa.link/otpw1g"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[11px] md:text-[16px] md:py-2.5 py-3 md:px-10 px-5 bg-ceedr-500 font-semibold flex items-center justify-center space-x-2 text-white "
-          >
-            <div className="relative md:w-[24px] md:h-[24px] w-[16px] h-[16px]">
-              <Image
-                src="/whatsapp.png"
-                alt="WhatsApp Icon"
-                fill
-                className="inline-block object-contain"
-              />
-            </div>
-            <span className="font-semibold">Chat With Us on WhatsApp</span>
-          </a>
+            className="w-full md:w-auto"
+            icon={
+              <div className="relative md:w-[24px] md:h-[24px] w-[16px] h-[16px]">
+                <Image
+                  src="/whatsapp.png"
+                  alt="WhatsApp Icon"
+                  fill
+                  className="inline-block object-contain"
+                />
+              </div>
+            }
+          />
 
-          <Link
+          <Button
+            text="Request a Service"
             href="#request-form"
+            variant="secondary"
             onClick={handleLinkClick}
-            className="md:text-[16px] text-[11px] md:py-2.5 py-3 md:px-10 px-5 bg-ceedr-200 font-semibold flex items-center justify-center space-x-2 text-ceedr-500"
-          >
-            Request a Service
-          </Link>
-
+            className="w-full md:w-auto"
+          />
         </div>
 
 
@@ -154,7 +152,7 @@ const Page = () => {
           </h1>
 
           <section className="flex  flex-col lg:flex-row lg:space-x-5 space-y-5">
-            <div className="bg-ceedr-500 relative text-white space-y-11 text-xs lg:w-1/3 h-[416px] md:h-[500px] px-6 pt-6 flex flex-col">
+            <div className="bg-ceedr-500 md:relative text-white space-y-8 text-xs lg:w-1/3 h-auto md:h-[500px] px-6 pt-6 flex flex-col">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="bg-ceedr-200 text-ceedr-500 flex items-center justify-center font-semibold text-2xl md:text-[30px]">
                   <span className="py-2 px-3">  01</span>
@@ -175,7 +173,7 @@ const Page = () => {
                 <li>Statement of Purpose (SOP) writing</li>
                 <li>Personal statements & scholarship letters</li>
               </ul>
-              <div className=" absolute bottom-0 right-6 flex ">
+              <div className="ml-auto md:absolute md:bottom-0 md:right-6  ">
                 <Image
                   src="/vectorLemon.png"
                   width="130"
@@ -186,7 +184,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="bg-ceedr-200 md:h-[500px] relative text-ceedr-500 lg:w-1/3 text-xs h-[400px] px-6 pt-6 flex flex-col space-y-5 md:space-y-11">
+            <div className="bg-ceedr-200 md:h-[500px] md:relative text-ceedr-500 lg:w-1/3 text-xs h-auto px-6 pt-6 flex flex-col space-y-5 md:space-y-11">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="text-ceedr-200 md:text-[30px] bg-ceedr-500 flex items-center justify-center font-semibold text-2xl">
                   <span className="py-2 px-3">  02</span>
@@ -203,7 +201,7 @@ const Page = () => {
                 <li>Cover letters that connect</li>
                 <li>LinkedIn optimization & profile revamps</li>
               </ul>
-              <div className="flex justify-end absolute bottom-0 right-5">
+              <div className="ml-auto md:absolute md:bottom-0 md:right-6">
                 <Image
                   src="/Vectorceedr.png"
                   width="130"
@@ -214,7 +212,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="bg-ceedrBrown-100 relative text-white text-xs lg:w-1/3 h-[400px] md:h-[500px] px-6 pt-6 flex flex-col">
+            <div className="bg-ceedrBrown-100 md:relative text-white text-xs lg:w-1/3 h-auto md:h-[500px] px-6 pt-6 flex flex-col">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="bg-white text-ceedrBrown-100 flex items-center justify-center font-semibold text-2xl md:text-[30px]">
                   <span className="py-2 px-3">03</span>
@@ -224,14 +222,14 @@ const Page = () => {
               <p className="font-poppins font-normal mt-8 md:mt-10 md:mb-8 mb-6 text-[14px] md:text-[18px] leading-5 md:leading-7">
                 Ideas don&apos;t fund themselves. We help you pitch them right.
               </p>
-              <ul className="list-disc pl-5 font-poppins font-normal text-[14px] md:text-[18px] leading-5 md:leading-7">
+              <ul className="list-disc pl-5 font-poppins mb-6 font-normal text-[14px] md:text-[18px] leading-5 md:leading-7">
                 <li>Business proposals & concept notes</li>
                 <li>Pitch decks (designed & written)</li>
                 <li>Company profiles</li>
                 <li>Executive bios</li>
                 <li>Email copy & brand messaging</li>
               </ul>
-              <div className="absolute bottom-0 right-5">
+              <div className="ml-auto md:absolute md:bottom-0 md:right-6 ">
                 <Image
                   src="/ vectorceedrwhite.png"
                   width="130"
@@ -426,13 +424,12 @@ const Page = () => {
             </div>
 
             <div className="order-3 md:w-full md:flex md:flex-col md:pr-35 md:items-end md:order-2 lg:col-span-1">
-              <Link
+              <Button
+                text="Work With Us"
                 href="#request-form"
                 onClick={handleLinkClick}
-                className="bg-ceedr-500 py-3 w-3/5 md:py-5 px-10 md:text-xl text-center text-white flex space-x-3 items-center justify-center"
-              >
-                <p className="font-playfair font-semibold md:text-[16px] text-[10px]">Work With Us</p>
-              </Link>
+                className="w-3/5 md:py-5 md:text-xl font-playfair"
+              />
             </div>
           </div>
         </section>
@@ -447,26 +444,30 @@ const Page = () => {
               the words that open doors.
             </p>
             <div className="lg:flex-row lg:space-x-10 flex flex-col items-center w-3/5 md:w-full lg:space-y-0 space-y-4">
-              <a
+              <Button
+                text="Start on WhatsApp"
                 href="https://wa.link/otpw1g"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-ceedr-500 w-full py-3 md:space-y-0 md:py-5 px-4 md:text-xl text-center text-white flex space-x-3 items-center justify-center"
-              >
-                <Image
-                  className="object-contain border"
-                  src="/white-whatsApp-icon.png"
-                  alt="button image"
-                  width={20}
-                  height={10}
-                />
-                <span className="text-[11px] font-semibold md:text-[16px] font-playfair">Start on whatsApp</span>
-              </a>
+                className="w-full md:py-5 font-playfair"
+                icon={
+                  <Image
+                    className="object-contain"
+                    src="/white-whatsApp-icon.png"
+                    alt="WhatsApp Icon"
+                    width={20}
+                    height={20}
+                  />
+                }
+              />
 
-              <button className="bg-ceedr-200 w-full py-3 px-4 md:py-5 md:text-xl text-center text-ceedr-500 flex space-x-3 items-center justify-center">
-                <span className="text-[11px] font-semibold md:text-[16px] font-playfair">Fill Request Form</span>
-              </button>
-
+              <Button
+                text="Fill Request Form"
+                onClick={() => {
+                  const element = document.getElementById('request-form');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }}
+                variant="secondary"
+                className="w-full md:py-5 font-playfair"
+              />
             </div>
           </div>
 
@@ -644,12 +645,12 @@ const Page = () => {
               <option value="Other">Other</option>
             </select>
 
-            <button
+            <Button
+              text="Submit Form"
+              variant="secondary"
               type="submit"
-              className="bg-ceedr-200 md:text-[16px] font-playfair font-semibold text-[10px] text-black px-2 py-3 w-1/2 mt-7"
-            >
-              Submit Form
-            </button>
+              className="mt-7 font-playfair"
+            />
           </form>
         </section>
 
@@ -722,12 +723,12 @@ const Page = () => {
             className="bg-white text-ceedrGray-100 p-3 w-full md:w-3/5"
             placeholder="Enter your email"
           />
-          <button
-            className="bg-ceedr-200 md:text-[11px] text-black font-semibold font-playfair p-3 md:px-5 "
+          <Button
+            text="Subscribe to our newsletter"
+            variant="secondary"
             type="submit"
-          >
-            Subscribe to our newsletter
-          </button>
+            className="md:w-auto font-playfair h-full p-3 md:px-5"
+          />
         </form>
         <nav className="md:flex md:space-x-40 md:text-sm md:font-medium">
           <ul className="flex space-x-9 font-semibold text-[13px] font-playfair items-center justify-center md:space-x-6">
