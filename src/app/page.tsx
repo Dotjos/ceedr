@@ -727,7 +727,7 @@ const Page = () => {
             text="Subscribe to our newsletter"
             variant="secondary"
             type="submit"
-            className="md:w-auto font-playfair h-full p-3 md:px-5"
+            className="w-full md:w-auto font-playfair h-full p-3 md:px-5"
           />
         </form>
         <nav className="md:flex md:space-x-40 md:text-sm md:font-medium">
