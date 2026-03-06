@@ -7,9 +7,9 @@ interface HeroProps {
 
 export default function Hero({ onNavItemClick }: HeroProps) {
     return (
-        <section className="font-playfair text-xs h-full flex flex-col w-full justify-between items-center text-center bg-[url(/greenGradient.png)] md:bg-[url(/rectangle-1.png)] bg-cover bg-no-repeat pb-10">
+        <section className="font-playfair text-xs h-full flex flex-col w-full justify-between items-center text-center pb-10">
             <div className="p-0 mt-12 md:p-3 flex md:mt-20 md:mb-10 mb-10 flex-col md:space-y-7 space-y-5 items-center">
-                <h3 className="text-[28px] text-center mb-10 leading-9 font-semibold md:leading-16 md:text-5xl text-ceedr-500">
+                <h3 className="text-[28px] text-center w-4/5 mb-10 leading-9 font-semibold md:leading-16 md:text-5xl text-ceedr-500">
                     It is not just what you have done, <br className="hidden md:block" /> it is how you
                     <span className="inline-block align-middle mx-1">
                         <Image
@@ -21,12 +21,12 @@ export default function Hero({ onNavItemClick }: HeroProps) {
                     </span>{" "}
                     write it.
                 </h3>
-                <p className="md:text-[18px] w-9/10 md:w-3/5 text-[14px] text-black leading-7 font-poppins font-normal">
+                <p className="md:text-[18px] w-4/5 md:w-3/5 text-[14px] text-black leading-5 font-poppins font-normal">
                     At Ceedr, we do not just write documents, we shape your career
                     narrative. From standout CVs to academic finesse and business
                     proposals that seal deals, Ceedr helps you write your way up.
                 </p>
-                <p className="md:text-[18px] w-9/10 md:w-3/5 text-[14px] text-black leading-5 font-poppins font-normal">
+                <p className="md:text-[18px] w-4/5 md:w-3/5 text-[14px] text-black leading-5 font-poppins font-normal">
                     For students. For professionals. For go-getters.
                 </p>
                 <p className="md:text-[18px] text-[14px] text-black leading-5 font-poppins md:w-full font-normal">Get writing that works.</p>

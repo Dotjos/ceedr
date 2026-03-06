@@ -78,7 +78,7 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
   }, [isMenuOpen]);
 
   return (
-    <nav className="bg-white w-9/10 py-4 px-4 md:px-7 lg:px-20 md:py-4 flex justify-between items-center md:mt-8 mt-4 relative">
+    <nav className="bg-white w-9/10  py-4 px-4 md:px-7 lg:px-20 md:py-4 flex justify-between items-center md:mt-8 mt-4 relative">
       <Link href="">
         <div className="h-[32.2px] w-20 md:h-[50px] relative lg:ml-10">
           <Image

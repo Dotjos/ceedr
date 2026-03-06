@@ -8,7 +8,7 @@ export default function Services() {
                 <hr className="w-4/5 md:w-1/5 border-t border-ceedrGray-100" />
             </div>
             <h1 className="mb-7 md:mb-12 md:w-[78%] md:text-4xl font-playfair font-semibold text-2xl">
-                From Projects to Pitches,<br /> We have Got Your Back
+                From Projects to Pitches,<br /> We Have Got Your Back
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">

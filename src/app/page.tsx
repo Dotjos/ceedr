@@ -48,19 +48,21 @@ const Page = () => {
 
   return (
     <main className="md:w-full items-center flex flex-col">
-      <section className="w-full flex flex-col items-center">
+      <section className="w-full flex flex-col items-center bg-[url(/greenGradient.png)] md:bg-[url(/rectangle-1.png)] bg-cover bg-no-repeat">
         <Navbar onNavItemClick={handleLinkClick} />
-
         <Hero onNavItemClick={handleLinkClick} />
+      </section>
 
+      <section className="w-full flex flex-col items-center">
         <div className="w-9/10 flex flex-col space-y-4 items-center justify-center">
           <Services />
           <Impact />
+          <Testimonials />
+
+          <Process onNavItemClick={handleLinkClick} />
         </div>
 
-        <Testimonials />
 
-        <Process onNavItemClick={handleLinkClick} />
 
         <Narrative />
 
