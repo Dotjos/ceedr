@@ -88,13 +88,13 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                             className="block md:font-bonche font-normal text-[#939393] w-full border border-gray-300 font-poppins bg-white py-3 md:py-4 px-3 shadow-sm focus:border-black focus:outline-none focus:ring-black text-sm md:text-lg"
                         >
                             <option value="">Select Preferred Service</option>
-                            <option value="CV/Resume">CV/Resume</option>
+                            <option value="CV/Resume">CV or Resume</option>
                             <option value="Cover Letter">Cover Letter</option>
                             <option value="LinkedIn Profile Optimization">LinkedIn Profile Optimization</option>
                             <option value="Final Year Project Writing">Final Year Project Writing</option>
                             <option value="Business Pitch Writing">Business Pitch Writing</option>
-                            <option value="Statement Of Purpose(SOP)">Statement Of Purpose(SOP)</option>
-                            <option value="Editing/Proofreading">Editing/Proofreading</option>
+                            <option value="Statement Of Purpose(SOP)">Statement Of Purpose</option>
+                            <option value="Editing/Proofreading">Editing and Proofreading</option>
                             <option value="Other">Other</option>
                         </select>
                     </div>
