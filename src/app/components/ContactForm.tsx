@@ -16,7 +16,7 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                     <h1 className="font-poppins font-normal md:text-[18px] text-[10px] whitespace-nowrap">REQUEST FORM</h1>
                     <hr className="w-3/5 border-t border-ceedrGray-100" />
                 </div>
-                <h1 className="text-[22px] md:text-[36px] mt-3 mb-5 font-semibold font-playfair text-ceedr-500">
+                <h1 className="text-[22px] md:text-[36px] mt-3 mb-5 font-semibold font-bonche text-ceedr-500">
                     Need Our Services? Let Us Get Started
                 </h1>
                 <p className="text-[14px] font-poppins font-normal md:text-[18px]">
@@ -33,7 +33,7 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                 >
                     {/* Name Field */}
                     <div className="flex flex-col">
-                        <label htmlFor="name" className="text-white md:font-playfair font-poppins font-semibold text-sm md:text-lg mb-2">
+                        <label htmlFor="name" className="text-white md:font-bonche font-poppins font-semibold text-sm md:text-lg mb-2">
                             Full Name:
                         </label>
                         <input
@@ -42,20 +42,20 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                             value={formData.name}
                             placeholder="Enter full name"
                             onChange={(e) => setformData({ ...formData, name: e.target.value })}
-                            className="p-3 md:p-4 text-sm md:text-lg md:font-playfair focus:outline-ceedrGray-100 bg-white w-full"
+                            className="p-3 md:p-4 text-sm md:text-lg md:font-bonche focus:outline-ceedrGray-100 bg-white w-full"
                         />
                     </div>
 
                     {/* Email Field */}
                     <div className="flex flex-col">
-                        <label htmlFor="mail" className="text-white md:font-playfair font-poppins font-semibold text-sm md:text-lg mb-2">
+                        <label htmlFor="mail" className="text-white md:font-bonche font-poppins font-semibold text-sm md:text-lg mb-2">
                             Email Address:
                         </label>
                         <input
                             type="text"
                             id="mail"
                             placeholder="Enter Email Address"
-                            className="p-3 md:p-4 text-sm md:text-lg md:font-playfair focus:outline-ceedrGray-100 bg-white w-full"
+                            className="p-3 md:p-4 text-sm md:text-lg md:font-bonche focus:outline-ceedrGray-100 bg-white w-full"
                             value={formData.email}
                             onChange={(e) => setformData({ ...formData, email: e.target.value })}
                         />
@@ -63,14 +63,14 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
 
                     {/* WhatsApp Field */}
                     <div className="flex flex-col">
-                        <label htmlFor="phoneNum" className="text-white md:font-playfair font-poppins font-semibold text-sm md:text-lg mb-2">
+                        <label htmlFor="phoneNum" className="text-white md:font-bonche font-poppins font-semibold text-sm md:text-lg mb-2">
                             WhatsApp Number:
                         </label>
                         <input
                             type="text"
                             id="phoneNum"
                             placeholder="Enter Phone Number"
-                            className="p-3 md:p-4 text-sm md:text-lg md:font-playfair focus:outline-ceedrGray-100 bg-white w-full"
+                            className="p-3 md:p-4 text-sm md:text-lg md:font-bonche focus:outline-ceedrGray-100 bg-white w-full"
                             value={formData.phone}
                             onChange={(e) => setformData({ ...formData, phone: e.target.value })}
                         />
@@ -78,14 +78,14 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
 
                     {/* Service Field */}
                     <div className="flex flex-col">
-                        <label htmlFor="serviceSel" className="text-white md:font-playfair font-poppins font-semibold text-sm md:text-lg mb-2">
+                        <label htmlFor="serviceSel" className="text-white md:font-bonche font-poppins font-semibold text-sm md:text-lg mb-2">
                             What service do you need?
                         </label>
                         <select
                             id="serviceSel"
                             value={formData.service}
                             onChange={(e) => setformData({ ...formData, service: e.target.value })}
-                            className="block md:font-playfair font-normal text-[#939393] w-full border border-gray-300 font-poppins bg-white py-3 md:py-4 px-3 shadow-sm focus:border-black focus:outline-none focus:ring-black text-sm md:text-lg"
+                            className="block md:font-bonche font-normal text-[#939393] w-full border border-gray-300 font-poppins bg-white py-3 md:py-4 px-3 shadow-sm focus:border-black focus:outline-none focus:ring-black text-sm md:text-lg"
                         >
                             <option value="">Select Preferred Service</option>
                             <option value="CV/Resume">CV/Resume</option>
@@ -101,13 +101,13 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
 
                     {/* More Info Field */}
                     <div className="flex flex-col">
-                        <label className="text-white md:font-playfair font-poppins font-semibold text-sm md:text-lg mb-2" htmlFor="textArea">
+                        <label className="text-white md:font-bonche font-poppins font-semibold text-sm md:text-lg mb-2" htmlFor="textArea">
                             Tell us a Bit More Optional
                         </label>
                         <textarea
                             id="textArea"
                             placeholder="Tell Us More"
-                            className="p-3 md:p-4 w-full text-sm md:text-lg md:font-playfair bg-white focus:outline-ceedrGray-100 h-24 md:h-32"
+                            className="p-3 md:p-4 w-full text-sm md:text-lg md:font-bonche bg-white focus:outline-ceedrGray-100 h-24 md:h-32"
                             value={formData.moreInfo}
                             onChange={(e) => setformData({ ...formData, moreInfo: e.target.value })}
                         ></textarea>
@@ -115,13 +115,13 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
 
                     {/* Timeline Field */}
                     <div className="flex flex-col">
-                        <label htmlFor="timeline" className="text-white md:font-playfair font-poppins font-semibold text-sm md:text-lg mb-2">
+                        <label htmlFor="timeline" className="text-white md:font-bonche font-poppins font-semibold text-sm md:text-lg mb-2">
                             Preferred Delivery Timeline
                         </label>
                         <select
                             value={formData.timeline}
                             onChange={(e) => setformData({ ...formData, timeline: e.target.value })}
-                            className="block md:font-playfair w-full text-[#939393] font-normal border border-gray-300 font-poppins bg-white py-3 md:py-4 px-3 shadow-sm focus:border-black focus:outline-none focus:ring-black text-sm md:text-lg"
+                            className="block md:font-bonche w-full text-[#939393] font-normal border border-gray-300 font-poppins bg-white py-3 md:py-4 px-3 shadow-sm focus:border-black focus:outline-none focus:ring-black text-sm md:text-lg"
                         >
                             <option value="">Choose a timeline</option>
                             <option value="Urgent:1-2 days">Urgent: 1 to 2 days</option>
@@ -131,11 +131,11 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
 
                     {/* Referral Field */}
                     <div className="flex flex-col">
-                        <label className="text-white md:font-playfair font-poppins font-semibold text-sm md:text-lg mb-2">
+                        <label className="text-white md:font-bonche font-poppins font-semibold text-sm md:text-lg mb-2">
                             How Did You Hear About Ceedr?
                         </label>
                         <select
-                            className="block md:font-playfair w-full text-[#939393] font-normal border border-gray-300 bg-white py-3 md:py-4 px-3 shadow-sm focus:border-black focus:outline-none focus:ring-black text-sm md:text-lg"
+                            className="block md:font-bonche w-full text-[#939393] font-normal border border-gray-300 bg-white py-3 md:py-4 px-3 shadow-sm focus:border-black focus:outline-none focus:ring-black text-sm md:text-lg"
                             onChange={(e) => setformData({ ...formData, referral: e.target.value })}
                         >
                             <option value="Social Media">Social Media</option>
@@ -148,7 +148,7 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                         text="Submit Form"
                         variant="secondary"
                         type="submit"
-                        className="mt-4 md:mt-8 font-playfair md:py-5 md:text-xl"
+                        className="mt-4 md:mt-8 font-bonche md:py-5 md:text-xl"
                     />
                 </form>
             </section>
@@ -159,7 +159,7 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                     <h1 className="text-[11px] font-poppins md:text-[18px] font-normal">CONTACT</h1>
                     <hr className="w-3/5 border-t border-ceedrGray-100" />
                 </div>
-                <h1 className="text-ceedr-500 md:text-[36px] mb-4 font-semibold text-[22px] font-playfair">
+                <h1 className="text-ceedr-500 md:text-[36px] mb-4 font-semibold text-[22px] font-bonche">
                     Got Questions? We Have Got Pens
                 </h1>
                 <p className="text-[14px] md:text-[18px] font-normal font-poppins">

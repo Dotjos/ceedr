@@ -78,7 +78,7 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
   }, [isMenuOpen]);
 
   return (
-    <nav className="bg-white w-9/10  py-4 px-4 md:px-7 lg:px-20 md:py-4 flex justify-between items-center md:mt-8 mt-4 relative">
+    <nav className="bg-white font-bonche w-9/10  py-4 px-4 md:px-7 lg:px-20 md:py-4 flex justify-between items-center md:mt-8 mt-4 relative">
       <Link href="">
         <div className="h-[32.2px] w-20 md:h-[50px] relative lg:ml-10">
           <Image
@@ -117,7 +117,7 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
         >
           &times;
         </button>
-        <ul className="flex flex-col space-y-8 text-center text-white font-playfair font-medium text-3xl">
+        <ul className="flex flex-col space-y-8 text-center text-white font-bonche font-medium text-3xl">
           <li>
             <a
               href="#services"
@@ -155,7 +155,7 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
         <Button
           text="Chat With Us on WhatsApp"
           href="https://wa.link/otpw1g"
-          className="font-playfair border-white text-white"
+          className="font-bonche border-white text-white"
           variant="outline"
           icon={<Image src="/Digital_Glyph_White.svg" alt="WhatsApp" width={24} height={24} className="object-contain" />}
         />

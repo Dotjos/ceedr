@@ -7,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ onNavItemClick }: HeroProps) {
     return (
-        <section className="font-playfair text-xs h-full flex flex-col w-full justify-between items-center text-center pb-10">
+        <section className="font-bonche text-xs h-full flex flex-col w-full justify-between items-center text-center pb-10">
             <div className="p-0 mt-12 md:p-3 flex md:mt-20 md:mb-10 mb-10 flex-col md:space-y-7 space-y-5 items-center">
                 <h3 className="text-[28px] text-center w-4/5 mb-10 leading-9 font-semibold md:leading-16 md:text-5xl text-ceedr-500">
                     It is not just what you have done, <br className="hidden md:block" /> it is how you
