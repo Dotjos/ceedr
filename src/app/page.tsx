@@ -145,7 +145,7 @@ const Page = () => {
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            <div className="bg-ceedr-500 md:relative text-white space-y-8 text-xs min-h-[500px] px-6 pt-6 flex flex-col">
+            <div className="bg-ceedr-500 relative text-white space-y-8 text-xs min-h-[500px] px-6 pt-6 flex flex-col">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="bg-ceedr-200 text-ceedr-500 flex items-center justify-center font-semibold text-2xl md:text-[30px]">
                   <span className="py-2 px-3">  01</span>
@@ -166,7 +166,7 @@ const Page = () => {
                 <li>Statement of Purpose (SOP) writing</li>
                 <li>Personal statements & scholarship letters</li>
               </ul>
-              <div className="ml-auto md:absolute md:bottom-0 md:right-4 opacity-50 md:opacity-100">
+              <div className="absolute bottom-0 right-4 opacity-50 md:opacity-100">
                 <Image
                   src="/vectorLemon.png"
                   width="100"
@@ -177,7 +177,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="bg-ceedr-200 min-h-[500px] md:relative text-ceedr-500 text-xs px-6 pt-6 flex flex-col space-y-5 md:space-y-11">
+            <div className="bg-ceedr-200 min-h-[500px] relative text-ceedr-500 text-xs px-6 pt-6 flex flex-col space-y-5 md:space-y-11">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="text-ceedr-200 md:text-[30px] bg-ceedr-500 flex items-center justify-center font-semibold text-2xl">
                   <span className="py-2 px-3">  02</span>
@@ -194,7 +194,7 @@ const Page = () => {
                 <li>Cover letters that connect</li>
                 <li>LinkedIn optimization & profile revamps</li>
               </ul>
-              <div className="ml-auto md:absolute md:bottom-0 md:right-4 opacity-50 md:opacity-100">
+              <div className="absolute bottom-0 right-4 opacity-50 md:opacity-100">
                 <Image
                   src="/Vectorceedr.png"
                   width="100"
@@ -205,7 +205,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="bg-ceedrBrown-100 md:relative text-white text-xs min-h-[500px] px-6 pt-6 flex flex-col">
+            <div className="bg-ceedrBrown-100 relative text-white text-xs min-h-[500px] px-6 pt-6 flex flex-col">
               <div className="flex space-x-3 font-playfair items-end">
                 <div className="bg-white text-ceedrBrown-100 flex items-center justify-center font-semibold text-2xl md:text-[30px]">
                   <span className="py-2 px-3">03</span>
@@ -222,7 +222,7 @@ const Page = () => {
                 <li>Executive bios</li>
                 <li>Email copy & brand messaging</li>
               </ul>
-              <div className="ml-auto md:absolute md:bottom-0 md:right-4 opacity-50 md:opacity-100">
+              <div className="absolute bottom-0 right-4 opacity-50 md:opacity-100">
                 <Image
                   src="/ vectorceedrwhite.png"
                   width="100"
