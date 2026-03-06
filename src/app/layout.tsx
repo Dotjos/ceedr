@@ -82,7 +82,7 @@ const bonche = localFont({
       style: "italic",
     },
   ],
-  variable: "--font-playfair",
+  variable: "--font-bonche",
 });
 
 export const metadata: Metadata = {

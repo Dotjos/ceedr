@@ -4,7 +4,7 @@ export default function Impact() {
     return (
         <section className="bg-ceedrGray-200 mt-20 md:w-full pb-4 px-5 pt-6 flex flex-col space-y-8 md:flex-row md:p-0 md:py-8 md:px-10 lg:justify-between lg:space-x-9 lg:space-y-0 md:items-center overflow-hidden">
             <div className="md:w-[45%] flex flex-col">
-                <h1 className="text-ceedr-500 text-2xl md:text-4xl font-semibold font-playfair text-left">
+                <h1 className="text-ceedr-500 text-2xl md:text-4xl font-semibold font-bonche text-left">
                     Not Just Words, Results That Speak
                 </h1>
                 <ul className="font-poppins mt-8 mb-10 font-normal text-[14px] md:text-[18px] leading-5 space-y-4 md:space-y-6">
@@ -29,7 +29,7 @@ export default function Impact() {
                         </li>
                     ))}
                 </ul>
-                <h3 className="font-playfair font-semibold md:text-[20px] text-[16px] text-ceedr-500 text-left">
+                <h3 className="font-bonche font-semibold md:text-[20px] text-[16px] text-ceedr-500 text-left">
                     We are not just service providers. We are your writing partners.
                 </h3>
             </div>

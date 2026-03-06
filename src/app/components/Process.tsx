@@ -15,7 +15,7 @@ export default function Process({ onNavItemClick }: ProcessProps) {
 
             <div className="w-full">
                 <div className="md:w-[78%] md:mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 items-end justify-between mb-6 px-5 md:px-0">
-                    <h1 className="order-1 md:col-span-1 md:text-4xl font-playfair md:text-left text-2xl font-semibold text-ceedr-500 max-w-[300px] md:max-w-md">
+                    <h1 className="order-1 md:col-span-1 md:text-4xl font-bonche md:text-left text-2xl font-semibold text-ceedr-500 max-w-[300px] md:max-w-md">
                         The Ceedr Process: <br /> Simple. Smart. Seamless
                     </h1>
 
@@ -24,7 +24,7 @@ export default function Process({ onNavItemClick }: ProcessProps) {
                             text="Work With Us"
                             href="#request-form"
                             onClick={onNavItemClick}
-                            className="w-3/5 md:py-5 md:text-xl font-playfair"
+                            className="w-3/5 md:py-5 md:text-xl font-bonche"
                         />
                     </div>
                 </div>
@@ -34,7 +34,7 @@ export default function Process({ onNavItemClick }: ProcessProps) {
                         {/* Step 01 */}
                         <div className="text-xs md:text-sm flex flex-col md:w-1/3 space-y-6">
                             <div className="md:flex items-center md:space-x-4">
-                                <div className="w-fit p-2 md:p-4 text-ceedr-200 text-2xl md:text-[30px] font-semibold font-playfair bg-ceedr-500">
+                                <div className="w-fit p-2 md:p-4 text-ceedr-200 text-2xl md:text-[30px] font-semibold font-bonche bg-ceedr-500">
                                     <span>01</span>
                                 </div>
                                 <div className="hidden md:block border-t-2 md:border-t-3 md:w-3/4 border-dashed border-ceedrGray-100"></div>
@@ -49,7 +49,7 @@ export default function Process({ onNavItemClick }: ProcessProps) {
                         {/* Step 02 */}
                         <div className="text-xs md:text-sm flex flex-col md:w-1/3 space-y-6">
                             <div className="md:flex items-center md:space-x-4">
-                                <div className="w-fit p-2 md:p-4 text-ceedr-200 text-2xl md:text-[30px] font-semibold font-playfair bg-ceedr-500">
+                                <div className="w-fit p-2 md:p-4 text-ceedr-200 text-2xl md:text-[30px] font-semibold font-bonche bg-ceedr-500">
                                     <span>02</span>
                                 </div>
                                 <div className="hidden md:block border-t-2 md:border-t-3 md:w-3/4 border-dashed border-ceedrGray-100"></div>
@@ -65,7 +65,7 @@ export default function Process({ onNavItemClick }: ProcessProps) {
                         {/* Step 03 */}
                         <div className="text-xs md:text-sm flex flex-col md:w-1/3 space-y-6">
                             <div className="md:flex items-center md:space-x-4">
-                                <div className="w-fit p-2 md:p-4 text-ceedr-200 text-2xl md:text-[30px] font-semibold font-playfair bg-ceedr-500">
+                                <div className="w-fit p-2 md:p-4 text-ceedr-200 text-2xl md:text-[30px] font-semibold font-bonche bg-ceedr-500">
                                     <span>03</span>
                                 </div>
                             </div>

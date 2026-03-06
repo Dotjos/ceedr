@@ -7,14 +7,14 @@ export default function Services() {
                 <h1 className="text-ceedrGray-100 font-normal text-[10px] md:text-[18px]">SERVICES</h1>
                 <hr className="w-4/5 md:w-1/5 border-t border-ceedrGray-100" />
             </div>
-            <h1 className="mb-7 md:mb-12 md:w-[78%] md:text-4xl font-playfair font-semibold text-2xl">
+            <h1 className="mb-7 md:mb-12 md:w-[78%] md:text-4xl font-bonche font-semibold text-2xl">
                 From Projects to Pitches,<br /> We Have Got Your Back
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 {/* Academic Writing */}
                 <div className="bg-ceedr-500 relative text-white space-y-8 text-xs min-h-[500px] px-6 pt-6 flex flex-col">
-                    <div className="flex space-x-3 font-playfair items-end">
+                    <div className="flex space-x-3 font-bonche items-end">
                         <div className="bg-ceedr-200 text-ceedr-500 flex items-center justify-center font-semibold text-2xl md:text-[30px]">
                             <span className="py-2 px-3">01</span>
                         </div>
@@ -46,7 +46,7 @@ export default function Services() {
 
                 {/* Career Writing */}
                 <div className="bg-ceedr-200 min-h-[500px] relative text-ceedr-500 text-xs px-6 pt-6 flex flex-col space-y-5 md:space-y-11">
-                    <div className="flex space-x-3 font-playfair items-end">
+                    <div className="flex space-x-3 font-bonche items-end">
                         <div className="text-ceedr-200 md:text-[30px] bg-ceedr-500 flex items-center justify-center font-semibold text-2xl">
                             <span className="py-2 px-3">02</span>
                         </div>
@@ -74,7 +74,7 @@ export default function Services() {
 
                 {/* Business and Professional Writing */}
                 <div className="bg-ceedrBrown-100 relative text-white text-xs min-h-[500px] px-6 pt-6 flex flex-col">
-                    <div className="flex space-x-3 font-playfair items-end">
+                    <div className="flex space-x-3 font-bonche items-end">
                         <div className="bg-white text-ceedrBrown-100 flex items-center justify-center font-semibold text-2xl md:text-[30px]">
                             <span className="py-2 px-3">03</span>
                         </div>

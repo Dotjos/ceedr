@@ -18,7 +18,7 @@ export default function Footer({ formData, setformData, handleSubmit, scrollToTo
                 alt="ceedrLogo"
                 className="border-white object-contain"
             />
-            <h1 className="font-semibold font-playfair md:mb-9 text-[22px] md:text-3xl">
+            <h1 className="font-semibold font-bonche md:mb-9 text-[22px] md:text-3xl">
                 We are not just service providers. <br /> We are your writing partners.
             </h1>
             <form
@@ -36,16 +36,16 @@ export default function Footer({ formData, setformData, handleSubmit, scrollToTo
                     text="Subscribe to our newsletter"
                     variant="secondary"
                     type="submit"
-                    className="w-full md:w-auto font-playfair h-full p-3 md:px-5"
+                    className="w-full md:w-auto font-bonche h-full p-3 md:px-5"
                 />
             </form>
             <nav className="md:flex md:space-x-40 md:text-[18px] md:font-medium">
-                <ul className="flex space-x-9 font-semibold text-[16px] font-playfair items-center justify-center md:space-x-6">
+                <ul className="flex space-x-9 font-semibold text-[16px] font-bonche items-center justify-center md:space-x-6">
                     <li><a href="#services" className="hover:underline">Services</a></li>
                     <li><a href="#testimonials" className="hover:underline">Testimonials</a></li>
                     <li><a href="#contact" className="hover:underline">Contact</a></li>
                 </ul>
-                <button onClick={scrollToTop} className="hidden hover:underline font-playfair md:block">
+                <button onClick={scrollToTop} className="hidden hover:underline font-bonche md:block">
                     Back to Top
                 </button>
             </nav>

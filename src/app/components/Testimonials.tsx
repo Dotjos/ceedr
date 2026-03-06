@@ -9,7 +9,7 @@ export default function Testimonials() {
                 <hr className="w-[55%] md:w-[37%] border-t border-ceedrGray-100" />
             </div>
 
-            <h1 className="font-playfair md:text-4xl font-semibold text-2xl md:text-[36px] text-left">
+            <h1 className="font-bonche md:text-4xl font-semibold text-2xl md:text-[36px] text-left">
                 Receipts? We Have Got Plenty.
                 <br /> Do Not Just Take Our Word For It.
             </h1>
