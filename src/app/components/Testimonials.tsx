@@ -5,7 +5,7 @@ export default function Testimonials() {
     return (
         <section id="testimonials" className="testimonies md:w-[78%] md:py-10">
             <div className="w-5/7 flex text-ceedrGray-100 items-center mt-3 mb-2 space-x-3">
-                <h1 className="text-xs md:text-[18px] font-poppins">TESTIMONIES</h1>
+                <h1 className="text-xs md:text-[18px] font-poppins">TESTIMONIALS</h1>
                 <hr className="w-[55%] md:w-[37%] border-t border-ceedrGray-100" />
             </div>
 
@@ -33,11 +33,11 @@ export default function Testimonials() {
 
                         <div className="flex items-center space-x-3 mt-auto">
                             <Image
-                                src="/Testimony.png"
+                                src={testimonial.image}
                                 alt={`Testimony ${index + 1}`}
                                 width={48}
                                 height={48}
-                                className="rounded-full object-cover shrink-0"
+                                className="rounded-full w-12 h-12 object-cover shrink-0"
                             />
                             <div className="font-poppins font-normal text-sm leading-tight">
                                 <h4 className="font-bold text-ceedr-500">{testimonial.testifierName}</h4>
