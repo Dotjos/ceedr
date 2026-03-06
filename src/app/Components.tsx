@@ -216,7 +216,7 @@ interface contactCardProps {
 
 export function ContactCard({ icon, smText, address, href }: contactCardProps) {
   const content = (
-    <div className="bg-white p-3 border flex text-xs w-full space-x-3 h-full">
+    <div className="bg-white hover:border-ceedr-500 hover:border-2 p-3 border flex text-xs w-full space-x-3 h-full">
       <div className="bg-ceedr-500 p-2 border flex items-center justify-center text-white">
         {icon}
       </div>
