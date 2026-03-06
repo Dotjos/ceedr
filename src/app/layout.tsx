@@ -88,6 +88,9 @@ const bonche = localFont({
 export const metadata: Metadata = {
   title: "Ceedr landing page",
   description: "Ceedr landing page",
+  icons: {
+    icon: "/ceedrLogo.png",
+  },
 };
 
 export default function RootLayout({
