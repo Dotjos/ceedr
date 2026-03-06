@@ -17,7 +17,7 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                     <hr className="w-3/5 border-t border-ceedrGray-100" />
                 </div>
                 <h1 className="text-[22px] md:text-[36px] mt-3 mb-5 font-semibold font-playfair text-ceedr-500">
-                    Need Our Services? Let us Get Started
+                    Need Our Services? Let Us Get Started
                 </h1>
                 <p className="text-[14px] font-poppins font-normal md:text-[18px]">
                     Need Our Services? Let us Get Started
@@ -124,7 +124,7 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                             className="block md:font-playfair w-full text-[#939393] font-normal border border-gray-300 font-poppins bg-white py-3 md:py-4 px-3 shadow-sm focus:border-black focus:outline-none focus:ring-black text-sm md:text-lg"
                         >
                             <option value="">Choose a timeline</option>
-                            <option value="Urgent:1-2 days">Urgent:1-2 days</option>
+                            <option value="Urgent:1-2 days">Urgent: 1 to 2 days</option>
                             <option value="Normal Timeline">Normal Timeline</option>
                         </select>
                     </div>
@@ -160,7 +160,7 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                     <hr className="w-3/5 border-t border-ceedrGray-100" />
                 </div>
                 <h1 className="text-ceedr-500 md:text-[36px] mb-4 font-semibold text-[22px] font-playfair">
-                    Got Questions? We have Got Pens
+                    Got Questions? We Have Got Pens
                 </h1>
                 <p className="text-[14px] md:text-[18px] font-normal font-poppins">
                     Have questions? Prefer to speak first? We are just a ping away.
@@ -182,13 +182,13 @@ export default function ContactForm({ formData, setformData, handleSubmit }: Con
                 <ContactCard
                     icon={<Instagram size={24} />}
                     smText="Instagram"
-                    address="@ceedr.ng"
+                    address="@ceedrconsults"
                     href="https://www.instagram.com/ceedrconsults?igsh=anZlcHEyZzhkaXAw"
                 />
                 <ContactCard
                     icon={<Twitter size={24} />}
                     smText="Twitter"
-                    address="@ceedr.ng"
+                    address="@ceedrconsults"
                     href="https://x.com/CeedrConsults"
                 />
             </div>

@@ -18,7 +18,7 @@ export default function Impact() {
                         <li key={i} className="flex items-center gap-2 md:gap-4">
                             <div className="w-6 h-6 md:w-8 md:h-8 relative">
                                 <Image
-                                    src="/Check.png"
+                                    src="/Check.svg"
                                     alt="check"
                                     fill
                                     priority

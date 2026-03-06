@@ -10,8 +10,8 @@ export default function Testimonials() {
             </div>
 
             <h1 className="font-playfair md:text-4xl font-semibold text-2xl md:text-[36px] text-left">
-                Receipts? We have Got Plenty.
-                <br /> Do not Just Take Our Word for It.
+                Receipts? We Have Got Plenty.
+                <br /> Do Not Just Take Our Word For It.
             </h1>
 
             <div className="flex flex-col space-y-5 lg:flex-row lg:space-x-10">
