@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -8,9 +9,79 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+const bonche = localFont({
+  src: [
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-lightitalic.otf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-mediumitalic.otf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-semibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-semibolditalic.otf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-bolditalic.otf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-extrabold.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-extrabolditalic.otf",
+      weight: "800",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-black.otf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Bonche/Demo_Fonts/Fontspring-DEMO-bonche-blackitalic.otf",
+      weight: "900",
+      style: "italic",
+    },
+  ],
   variable: "--font-playfair",
 });
 
@@ -25,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${bonche.variable} ${poppins.variable}`}>
       <body className={``}>{children}</body>
     </html>
   );

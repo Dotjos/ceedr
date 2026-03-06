@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
+
 export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 
 interface ButtonProps {
@@ -27,7 +28,7 @@ export function Button({
   isFullWidth = false,
   type = 'button',
 }: ButtonProps) {
-  const baseStyles = "flex items-center justify-center space-x-2 font-semibold transition-all duration-200";
+  const baseStyles = "flex items-center justify-center space-x-2 font-semibold whitespace-nowrap transition-all duration-200";
   const variants = {
     primary: "bg-ceedr-500 text-white hover:bg-ceedr-500/90",
     secondary: "bg-ceedr-200 text-ceedr-500 hover:bg-ceedr-200/90",
@@ -151,26 +152,16 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
             </a>
           </li>
         </ul>
-
         <Button
           text="Chat With Us on WhatsApp"
           href="https://wa.link/otpw1g"
           className="font-playfair border-white text-white"
           variant="outline"
-          icon={
-            <div className="relative w-6 h-6">
-              <Image
-                src="/white-whatsApp-icon.png"
-                alt="WhatsApp Icon"
-                fill
-                className="object-contain"
-              />
-            </div>
-          }
+          icon={<Image src="/Digital_Glyph_White.svg" alt="WhatsApp" width={24} height={24} className="object-contain" />}
         />
       </div>
 
-      <div className="lg:flex lg:w-3/5 font-semibold hidden lg:justify-around lg:text-sm">
+      <div className="lg:flex lg:w-3/5 font-semibold hidden lg:justify-around lg:text-[18px]">
         <ul className="flex space-x-2 items-center justify-center lg:space-x-10">
           <li>
             <a
@@ -209,15 +200,7 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
           text="Chat With Us on WhatsApp"
           href="https://wa.link/otpw1g"
           variant="outline"
-          icon={
-            <Image
-              src="/whatsapp-2.png"
-              alt="WhatsApp Icon"
-              width={24}
-              height={24}
-              className="inline-block object-contain"
-            />
-          }
+          icon={<Image src="/Digital_Glyph_Dark_Green.svg" alt="WhatsApp" width={24} height={24} className="object-contain" />}
         />
       </div>
     </nav >
@@ -225,23 +208,17 @@ export function Navbar({ onNavItemClick }: { onNavItemClick?: (e: React.MouseEve
 }
 
 interface contactCardProps {
-  imgPath: string;
+  icon: React.ReactNode;
   smText: string;
   address: string;
   href?: string;
 }
 
-export function ContactCard({ imgPath, smText, address, href }: contactCardProps) {
+export function ContactCard({ icon, smText, address, href }: contactCardProps) {
   const content = (
     <div className="bg-white p-3 border flex text-xs w-full space-x-3 h-full">
-      <div className="bg-ceedr-500 p-2 border flex items-center justify-center">
-        <Image
-          src={imgPath}
-          alt="Contact Icon"
-          width={24}
-          height={24}
-          className="object-contain"
-        />
+      <div className="bg-ceedr-500 p-2 border flex items-center justify-center text-white">
+        {icon}
       </div>
       <div className="flex flex-col justify-center">
         <h1 className="font-semibold">{smText}</h1>
