@@ -685,7 +685,7 @@ const Page = () => {
 
       <footer className="bg-ceedr-500 py-15 px-5 flex space-y-7 md:space-y-5 w-full flex-col items-center text-center text-xs text-white">
         <Image
-          src="/Frame 49.png"
+          src="/Frame 49.svg"
           height={100}
           width={100}
           alt="ceedrLogo"
